@@ -149,3 +149,9 @@ const todoCompleted = todos.filter(function(todo){
     return todo.text;
 })
 console.log(todoCompleted);
+
+const num_1 = 0;
+
+if(num_1 == 10){
+    console.log("x is 10");
+}
