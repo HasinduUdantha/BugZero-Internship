@@ -150,8 +150,58 @@ const todoCompleted = todos.filter(function(todo){
 })
 console.log(todoCompleted);
 
-const num_1 = 0;
 
-if(num_1 == 10){
+// Conditioner
+const num_1 = 100;
+
+if(num_1 == 10){    // == equal, === equal and datatype is equal
+
     console.log("x is 10");
+
+}else if( num_1 > 10 ){
+    console.log("x is greater than 10.")
+}
+
+else{
+    console.log("X is not equal 10 or lower than 10.")
+}
+
+const x_1 = 6;
+const x_2 = 11;
+
+if(x_1>5 && x_2>10){
+    console.log("X is more than 5 or y is more than 10");
+}
+
+// Switch 
+const x_3 = 9;
+
+const color = "green";
+
+switch(color){
+    case "red":
+        console.log("color is red");
+        break;
+    case "blue":
+        console.log("color is blue");
+        break;
+    default:
+        console.log("color is NOT red or blue");
+        break;        
+}
+// functions 
+// function addNums(num1,num2){
+//     console.log(num1+num2);
+
+// }
+// addNums(5,4);
+// addNums(); // NaN Not a Number
+
+const addNums = (num1 =1, num2 =1) => {
+    return num1 + num2;
+}
+console.log(addNums(5, 5));
+
+function Person(first_Name, last_Name, dob){
+    this.first_Name
 }
