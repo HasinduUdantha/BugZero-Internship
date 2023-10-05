@@ -1,22 +1,22 @@
-//alert("Hello World");
-//console.log("Hello World");
-//console.error("This is an error");
-//console.warn("This is a warning");
+alert("Hello World");
+console.log("Hello World");
+console.error("This is an error");
+console.warn("This is a warning");
 
 // var, let, const(let & const were added in ES6)
 
 // let = can reassign values
 
-// let age = 23;
-// age = 24;
+let age_ = 23;
+age_ = 24;
 
-// console.log(age);
+console.log(age_);
 
 // const = can't reassign values
 
-// const score = 10;
-// score = 15;  // an error occured
-// console.log(score);
+const score = 10;
+score = 15;  // an error occured
+console.log(score);
 
 // data types
 // String, Numbers, Boolean, NULL, Undefined
@@ -198,10 +198,37 @@ switch(color){
 // addNums(); // NaN Not a Number
 
 const addNums = (num1 =1, num2 =1) => {
-    return num1 + num2;
+    return num1 + num2; 
 }
 console.log(addNums(5, 5));
 
 function Person(first_Name, last_Name, dob){
-    this.first_Name
+    this.first_Name = first_Name;
+    this.last_Name = last_Name;
+    this.dob = new Date(dob); 
+    this.getBirthYear = function(){
+        return this.dob.getFullYear();
+    }
+    this.getFullName = function(){
+        return `${this.first_Name} ${this.last_Name}`
+    }
 }
+
+
+//Class
+class Person{
+    constructor(first_Name, last_Name,dob){
+        this.first_Name = first_Name;
+        this.last_Name = last_Name;
+        this.dob = new Date(dob); 
+    }
+}
+// Instantiate object
+
+const person1 = new Person("john", "Doe", "4-3-1980");
+const person2 = new Person("Mary", "Jane", "5-8-1990");
+
+
+console.log(person1);
+console.log(person1.getBirthYear());
+console.log(person2.getFullName());
