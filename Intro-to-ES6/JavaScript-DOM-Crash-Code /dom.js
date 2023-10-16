@@ -49,124 +49,121 @@
  //GET ELEMENTS BY TAG NAME //
  var li = document.getElementsByTagName("li");
 
-// console.log(li);
-// console.log(li[1]);
-// li[1].textContent = "Hello 2"
-// li[1].style.fontWeight = "bold";
-// li[1].style.backgroundColor = "yellow";
+ console.log(li); console.log(li[1]);
+ li[1].textContent = "Hello 2"
+ li[1].style.fontWeight = "bold";
+ li[1].style.backgroundColor = "yellow";
 
-// // Gives error
-// // items.style.backgroundColor = "#f4f4f4";
+ // Gives error
+  items.style.backgroundColor = "#f4f4f4";
 
-// for(var i = 0; i < li.length; i++){
-//     li[i].style.backgroundColor = "#f4f4f4";
-// }
+ for(var i = 0; i < li.length; i++){
+     li[i].style.backgroundColor = "#f4f4f4";
+ }
 
 
-// //QUERY SELECTER //
+ //QUERY SELECTER //
  
-// var header = document.querySelector("#main-header");
-// header.style.borderBottom = "solid 4px #ccc";
+ var header = document.querySelector("#main-header");
+ header.style.borderBottom = "solid 4px #ccc";
 
-// var input = document.querySelector("input");
-// input.value = "Hello World";
+ var input = document.querySelector("input");
+ input.value = "Hello World";
 
-//  var submit = document.querySelector('input[type = "submit"]');
-//  submit.value = "SEND"
-// var item = document.querySelector('.list-group-item');
-// item.style.color = "red";
+  var submit = document.querySelector('input[type = "submit"]');
+  submit.value = "SEND"
+ var item = document.querySelector('.list-group-item');
+ item.style.color = "red";
 
-// var lastItem = document.querySelector('.list-group-item:last-child');
-// lastItem.style.color = "blue"
+ var lastItem = document.querySelector('.list-group-item:last-child');
+ lastItem.style.color = "blue"
 
-// var secondItem = document.querySelector(".list-group-item:nth-child(2)");
-// secondItem.style.color = "coral";
+ var secondItem = document.querySelector(".list-group-item:nth-child(2)");
+ secondItem.style.color = "coral";
 
-// //QUERY SELECTOR ALL //
+ //QUERY SELECTOR ALL //
 
 // var titles = document.querySelectorAll(".title");
+ console.log(titles);
+ titles[0].textContent = "Hello";
 
-// console.log(titles);
-// titles[0].textContent = "Hello";
+ var odd = document.querySelectorAll("li:nth-child(odd)");
+ var even = document.querySelectorAll("li:nth-child(even)");
 
-// var odd = document.querySelectorAll("li:nth-child(odd)");
-// var even = document.querySelectorAll("li:nth-child(even)");
+ for(var i=0; i< odd.length; i++){
+     odd[i].style.backgroundColor = "#f4f4f4";
+    even[i].style.backgroundColor = "#ccc";
+ }
 
-// for(var i=0; i< odd.length; i++){
-//     odd[i].style.backgroundColor = "#f4f4f4";
-//     even[i].style.backgroundColor = "#ccc";
-// }
+// TRAVERSING THE DOM //
 
-// // TRAVERSING THE DOM //
-
-//var itemList = document.querySelector("#items");
-// // parentNode
-
-// console.log(itemList.parentNode);
-// itemList.parentNode.style.backgroundColor = "#f4f4f4";
-// console.log(itemList.parentNode.parentNode.parentNode);
+var itemList = document.querySelector("#items");
+ // parentNode
+ console.log(itemList.parentNode);
+itemList.parentNode.style.backgroundColor = "#f4f4f4";
+ console.log(itemList.parentNode.parentNode.parentNode);
 
 // // parentElement
 
-// console.log(itemList.parentElement);
-// itemList.parentElement.style.backgroundColor = "#f4f4f4";
-// console.log(itemList.parentElement.parentElement.parentElement);
+ console.log(itemList.parentElement);
+ itemList.parentElement.style.backgroundColor = "#f4f4f4";
+ console.log(itemList.parentElement.parentElement.parentElement);
 
-// // childNode
+ // childNode
 
-//console.log(itemList.childNodes);
+console.log(itemList.childNodes);
 
-// console.log(itemList.children);
-// console.assert.log(itemList.children[1]);
-// itemList.children[1].style.backgroundColor = "yellow";
+ console.log(itemList.children);
+ console.assert.log(itemList.children[1]);
+ itemList.children[1].style.backgroundColor = "yellow";
 
-// // FirstChild 
-// console.log(itemList.firstChild);
+ // FirstChild 
+ console.log(itemList.firstChild);
 
-// firstElementChild
-// console.log(itemList.firstElementChild);
-// itemList.firstElementChild.textContent = "Hello 1";
+ firstElementChild
+ console.log(itemList.firstElementChild);
+ itemList.firstElementChild.textContent = "Hello 1";
 
-// lastElementChild
-// console.log(itemList.lastElementChild);
-// itemList.lastElementChild.textContent = "Hello 4";
+ lastElementChild
+ console.log(itemList.lastElementChild);
+ itemList.lastElementChild.textContent = "Hello 4";
 
 // nextSibling
-// console.log(itemList.nextSibling);
-// // nextElementSibling
-// console.log(itemList.nextElementSibling);
+ console.log(itemList.nextSibling);
+// nextElementSibling
+ console.log(itemList.nextElementSibling);
 
 // previousSibling
-// console.log(itemList.previousSibling);
-// // previousElementSibling
-// console.log(itemList.previousElementSibling);
-// itemList.previousElementSibling.style.color = "green";
+console.log(itemList.previousSibling);
+// previousElementSibling
+ console.log(itemList.previousElementSibling);
+itemList.previousElementSibling.style.color = "green";
 
 //create Element
 
-// Create a div
-// var newDiv = document.createElement("div");
+//Create a div
+ var newDiv = document.createElement("div");
 
-// // Add class
-// newDiv.className = "hello";
+ // Add class
+ newDiv.className = "hello";
 
-// // Add attr
-// newDiv.setAttribute("title", "Hello Div");
+ // Add attr
+ newDiv.setAttribute("title", "Hello Div");
 
-// //create TEXT NODE
-// var newDivText = document.createTextNode("Hello World");
+ //create TEXT NODE
+ var newDivText = document.createTextNode("Hello World");
 
-// // Add text to div
-// newDiv.appendChild(newDivText);
+ // Add text to div
+ newDiv.appendChild(newDivText);
 
-// var container = document.querySelector("header .container");
-// var h1 = document.querySelector("header h1");
+ var container = document.querySelector("header .container");
+ var h1 = document.querySelector("header h1");
 
-// console.log(newDiv);
+ console.log(newDiv);
 
-// newDiv.style.fontSize = "30px";
+ newDiv.style.fontSize = "30px";
 
-// container.insertBefore(newDiv, h1);
+ container.insertBefore(newDiv, h1);
 
 var button = document.getElementById("button").addEventListener("click", buttonClick)
     
