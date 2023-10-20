@@ -133,5 +133,9 @@ const totalYears = companies.reduce((total, company) => total + (company.end - c
 
 console.log(totalYears);
 
+// // Combine Methods
+
+const combined = ages
+.map(age => age*2)
 
 
