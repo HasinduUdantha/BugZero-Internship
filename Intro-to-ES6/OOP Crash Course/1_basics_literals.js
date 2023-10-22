@@ -18,4 +18,17 @@ const book1 = {
         return `${this.title} was written by ${this.author} in ${this.year}`;
     }
 }
-console.log(book1.title)
+
+const book2 = {
+    title: 'Book Two',
+    author: 'Jane Doe',
+    year: '2016',
+    getSummery: function(){
+        return `${this.title} was written by ${this.author} in ${this.year}`;
+    }
+}
+// console.log(book1.getSummery());
+// console.log(book2.getSummery());
+// console.log(Object.values(book2));
+// console.log(Object.keys(book2));
+
