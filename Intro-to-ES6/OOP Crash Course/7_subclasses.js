@@ -24,13 +24,15 @@ class Book {
     }
 };
 
+// Magazine Subclass
+class Magazine extends Book{
+    constructor(title,author,year,month){
+        super(title,author,year);
+        this.month = month;
+    }
+};
 
+// Instantiate Magazine
+const mag1 = new Magazine('Mag One', 'John Doe', '2018', 'Jan');
 
-// Instantiate Object
-const book1 = new Book('Book One', 'John Doe', '2013');
-
-console.log(book1);
-book1.revise('2018');
-console.log(book1);
-
-console.log(Book.topBookStore());
+console.log(mag1.getSummery());
