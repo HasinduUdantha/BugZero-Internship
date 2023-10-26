@@ -35,6 +35,8 @@ body{
     padding: 20px;
     width: 70%;
     box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 5px 8px 0 rgba(0,0,0,0.17);
+    animation-name: modalopen;
+    animation-duration: 2s;
 
 }
 
@@ -50,4 +52,9 @@ body{
     color: #000;
     text-decoration: none;
 
+}
+
+@keyframes modalopen{
+    from{opacity: 0}
+    to{opacity: 1}
 }
