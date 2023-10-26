@@ -40,11 +40,32 @@ body{
 
 }
 
+.modal-header{
+     background-color: coral;
+     padding: 15px;
+     color: #fff;
+}
+
+.modal-header h2{
+    margin: 0;
+}
+
 .closeBtn{
     color: #ccc;
     float: right;
     font-size: 30px;
+    color: #fff;
+}
 
+.modal-body{
+    padding: 10px 20px;
+}
+
+.modal-footer{
+    background-color: coral;
+    padding: 10px;
+    color: #fff;
+    text-align:center ;
 }
 
 .closeBtn:hover, .closeBtn:focus{
