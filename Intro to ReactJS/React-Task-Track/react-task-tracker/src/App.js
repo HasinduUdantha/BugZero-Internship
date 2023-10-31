@@ -26,7 +26,7 @@ function App() {
   ]);
   return (
     <div className="container">
-      <Header />
+      <Header /> 
       <Button />
       <Tasks tasks={tasks}/>
     </div>
