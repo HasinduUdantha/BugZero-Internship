@@ -40,3 +40,5 @@ tailwind.config.js
 /dist
 /build
 .cache
+
+.env
