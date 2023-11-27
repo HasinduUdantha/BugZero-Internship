@@ -30,6 +30,9 @@ function renderCafe(doc) {
 
 // getting data
 db.collection("cafes")
+// filter queries
+//.where('city', '==', 'Manchester')
+//.where('city', '>', 'N')
   .get()
   .then((snapshot) => {
     snapshot.docs.forEach((doc) => {
