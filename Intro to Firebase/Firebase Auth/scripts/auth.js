@@ -1,17 +1,16 @@
 // listen for auth status changes
-auth.onAuthStateChanged((user) => {
-  if (user) {
-    console.log("user logged in: ", user);
-    db.collection("guides")
-      .get()
-      .then((snapshot) => {
+auth.onAuthStateChanged(user => {
+    if (user) {
+      db.collection('guides').get().then(snapshot => {
         setupGuides(snapshot.docs);
+        setupUI(user);
       });
-  } else {
-    console.log("user logged out");
-    setupGuides([]);
-  }
-});
+    } else {
+      setupUI();
+      setupGuides([]);
+    }
+  })
+  
 
 // signup
 const signupForm = document.querySelector("#signup-form");
