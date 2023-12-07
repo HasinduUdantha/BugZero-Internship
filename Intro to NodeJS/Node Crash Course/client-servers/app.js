@@ -40,7 +40,7 @@ app.get("./about-us", (req, res) => {
   res.redirect("./about");
 });
 
-app.get("./blogs/create", (req, res) => {
+app.get("/blogs/create", (req, res) => {
   res.render("create", { title: "Create a new blog" });
 });
 
