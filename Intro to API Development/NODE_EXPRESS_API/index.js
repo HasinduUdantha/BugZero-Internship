@@ -8,7 +8,7 @@ app.use(bodyParser.json());
 
 app.get("/", (req, res) => {
   console.log("[TEST]!");
-  res.send('Hello from Homepage')
+  res.send('Hello')
 });
 
 app.listen(PORT, () =>
