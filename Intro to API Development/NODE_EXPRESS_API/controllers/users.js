@@ -1,38 +1,49 @@
-import { v4 as uuid } from "uuid";
-
-let users = [];
+import { v4 as uuidv4 } from "uuid";
 
 export const getUsers = (req, res) => {
-  console.log(`Users in the database: ${users}`);
-
   res.send(users);
 };
 
 export const createUser = (req, res) => {
   const user = req.body;
 
-  users.push({ ...user, id: uuid() });
+  const userId = uuidv4();
 
-  console.log(`User [${user.username}] added to the database.`);
+  users.push({ ...user, id: userId });
+
+  res.send(`User with the name ${user.firstName} added to the database!`);
 };
 
 export const getUser = (req, res) => {
-  res.send(req.params.id);
+  const { id } = req.params;
+
+  const foundUser = users.find((user) => user.id === id);
+
+  res.send(foundUser);
 };
 
 export const deleteUser = (req, res) => {
-  console.log(`user with id ${req.params.id} has been deleted`);
+  const { id } = req.params;
 
-  users = users.filter((user) => user.id !== req.params.id);
+  users = users.filter((user) => user.id !== id);
+  res.send(`User with the id ${id} is deleted from the database.`);
 };
 
 export const updateUser = (req, res) => {
-  const user = users.find((user) => user.id === req.params.id);
+  const { id } = req.params;
+  const { firstName, lastName, age } = req.body;
 
-  user.username = req.body.username;
-  user.age = req.body.age;
+  const user = users.find((user) => user.id === id);
 
-  console.log(
-    `username has been updated to ${req.body.username}.age has been updated to ${req.body.age}`
-  );
+  if (firstName) {
+    user.firstName = firstName;
+  }
+  if (lastName) {
+    user.lastName = lastName;
+  }
+  if (age) {
+    user.age = age;
+  }
+
+  res.send(`User with id ${id} has been updated`);
 };
