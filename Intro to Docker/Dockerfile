@@ -1,9 +1,9 @@
-FROM ubuntu
+FROM python
 
-
-RUN apt-get update
-RUN apt-get -y install nginx
+WORKDIR /usr/app/src
 
 COPY html /var/
+COPY python/demo.py $WORKDIR
 
-CMD ["echo", "Hello"]
+CMD ["python", "./demo.py"]
+
